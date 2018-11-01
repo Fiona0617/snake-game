@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .map {
+            width: 800px;
+            height: 600px;
+            background-color: #CCCCCC;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="map" class="map"></div>
+</body>
+<!-- 为了避免上传到网上后，引入多个js会请求多次，所以把这几个js文件合并成一个
+<script src="Food.js"></script>
+<script src="Snake.js"></script>
+<script src="Game.js"></script> -->
+<script src="index.js"></script>
+<script>
+    //获取游戏背景元素
+    var map = document.getElementById("map");
+    // //创建一个食物
+    // var food = new Food();
+    // food.render(map);
+    // //创建并显示蛇
+    // var snake = new Snake();
+    // snake.render(map);
+    
+    //创建一个游戏控制器
+    var game1 = new Game(map);
+    game1.start();
+</script>
+</html>
